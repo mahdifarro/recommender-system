@@ -1,0 +1,27 @@
+<html>
+   <body>      
+      <form action = "/" method = "POST">
+         <p>Enter dataset URLs with a '-' between them:</p>   
+         <p><input type = "text" name = "datasets" /></p>
+
+         <p>Enter Rows names with a '-' between them:</p>  
+         <p><input type = "text" name = "rowNames" /></p>
+
+         <p>Enter your favorite object:</p>
+         <p><input type = "text" name = "favoriteObject" /></p>
+
+         <p><input type = "submit" value = "submit" /></p>
+      </form>      
+
+      <table>
+         <tr>
+            <th>movie</th>
+         </tr>
+         {% for movie in favoriteMovies %}
+            <tr>
+               <td>{{ movie }}</td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>
